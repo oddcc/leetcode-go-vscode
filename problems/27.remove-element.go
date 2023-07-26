@@ -8,23 +8,19 @@ package problems
 
 // @lc code=start
 func removeElement(nums []int, val int) int {
-	queue := make([]int, 0)
+	current := 0
+	needToFill := 0
 	cnt := 0
 
-	for i := 0; i < len(nums); i++ {
-		if nums[i] == val {
-			queue = append(queue, i)
-			cnt++
+	for current < len(nums) {
+		if nums[current] != val {
+			nums[needToFill] = nums[current]
+			needToFill++
 		} else {
-			if len(queue) > 0 {
-				fill := queue[0]
-				queue = queue[1:]
-				queue = append(queue, i)
-				nums[fill] = nums[i]
-			}
+			cnt++
 		}
+		current++
 	}
-
 	return len(nums) - cnt
 }
 
