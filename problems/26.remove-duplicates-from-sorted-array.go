@@ -7,7 +7,7 @@ package problems
  */
 
 // @lc code=start
-func removeDuplicates(nums []int) int {
+func removeDuplicates_deleteToSubmit(nums []int) int {
 	cnt := 0
 	const initT int = -999
 	c := 0
