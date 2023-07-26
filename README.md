@@ -1,1 +1,1 @@
-# leetcode-java-vscode
+# leetcode-go-vscode
