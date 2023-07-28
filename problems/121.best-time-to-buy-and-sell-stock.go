@@ -7,7 +7,7 @@ package problems
  */
 
 // @lc code=start
-func maxProfit(prices []int) int {
+func maxProfit_deleteToSubmit(prices []int) int {
 	min := 0
 	maxProfit := 0
 
