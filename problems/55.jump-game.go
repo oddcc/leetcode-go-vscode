@@ -10,11 +10,11 @@ package problems
 func canJump(nums []int) bool {
 	max := 0
 
-	for i := 0; i < len(nums)-1; i++ {
+	for i := 0; i < len(nums); i++ {
 		if i > max {
 			break
 		}
-		if i + nums[i] > max {
+		if i+nums[i] > max {
 			max = i + nums[i]
 		}
 	}

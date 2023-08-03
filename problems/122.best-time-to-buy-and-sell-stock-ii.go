@@ -1,4 +1,5 @@
 package problems
+
 /*
  * @lc app=leetcode.cn id=122 lang=golang
  *
@@ -8,7 +9,7 @@ package problems
 // @lc code=start
 func maxProfit(prices []int) int {
 	var profit = make([][]int, len(prices))
-	for i :=0; i < len(prices); i++ {
+	for i := 0; i < len(prices); i++ {
 		profit[i] = make([]int, 2)
 	}
 
@@ -16,7 +17,7 @@ func maxProfit(prices []int) int {
 	profit[0][1] = -prices[0]
 	for i := 1; i < len(prices); i++ {
 		profitIfNoStock := profit[i-1][0]
-		if profitIfNoStock < profit[i-1][1] + prices[i] {
+		if profitIfNoStock < profit[i-1][1]+prices[i] {
 			profitIfNoStock = profit[i-1][1] + prices[i]
 		}
 		profit[i][0] = profitIfNoStock
@@ -28,7 +29,7 @@ func maxProfit(prices []int) int {
 		profit[i][1] = profitIfHoldStock
 	}
 
-	return profit[len(prices) - 1][0]
+	return profit[len(prices)-1][0]
 }
-// @lc code=end
 
+// @lc code=end
